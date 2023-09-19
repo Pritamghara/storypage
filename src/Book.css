@@ -1,0 +1,32 @@
+.book {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+  }
+  
+  .left-page,
+  .right-page {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform-origin: 0% 50%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+  }
+  
+  .right-page {
+    transform: rotateY(0deg);
+  }
+  
+  .book.turning {
+    transform: rotateY(-180deg);
+  }
+  

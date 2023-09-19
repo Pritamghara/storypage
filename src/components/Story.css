@@ -1,0 +1,47 @@
+/* src/components/Story.css */
+
+.story-container {
+  position: relative;
+  perspective: 1000px;
+}
+
+.story-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-page {
+  flex: 1;
+  padding: 20px;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+
+.right-page {
+  flex: 1;
+  transform-origin: right center;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.right-page:hover {
+  transform: rotateY(-20deg); /* Adjust the angle as needed */
+}
+
+.page-turn-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.page-turn-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
